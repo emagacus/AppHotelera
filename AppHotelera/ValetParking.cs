@@ -20,7 +20,10 @@ namespace AppHotelera
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ValetParking);
 
+            Button b1 = FindViewById<Button>(Resource.Id.buttonOKPV);
+            b1.Click += delegate { createDialog(); };
 
         }
+
     }
 }

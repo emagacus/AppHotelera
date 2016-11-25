@@ -34,10 +34,10 @@ namespace AppHotelera
 
 
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
-            alert.SetTitle("hello");
-            alert.SetMessage("message");
-            alert.SetNegativeButton("Cancel", (senderAlert, args) => {
-                Toast.MakeText(this, "Cancelled!", ToastLength.Short).Show();
+            alert.SetTitle("Servicio");
+            alert.SetMessage("SU SERVICIO SE HA AGREGADO!");
+            alert.SetPositiveButton("ACEPTAR", (senderAlert, args) => {
+                Toast.MakeText(this, "Servicio Agregado!", ToastLength.Short).Show();
             });
 
             Dialog dialog = alert.Create();
