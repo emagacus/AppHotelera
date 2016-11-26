@@ -15,6 +15,13 @@ namespace AppHotelera
     [Activity(Label = "ServicioActivity")]
     public class ServicioActivity : Activity
     {
+
+        int id;
+        string name;
+        string descripcion;
+        decimal costo;
+        int idCte;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
 

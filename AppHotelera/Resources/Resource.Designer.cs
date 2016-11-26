@@ -122,7 +122,10 @@ namespace AppHotelera
 			public const int Menu = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int ValetParking = 2130903042;
+			public const int Restaurant = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int ValetParking = 2130903043;
 			
 			static Layout()
 			{
@@ -142,6 +145,12 @@ namespace AppHotelera
 			
 			// aapt resource value: 0x7f040000
 			public const int Hello = 2130968576;
+			
+			// aapt resource value: 0x7f040003
+			public const int Password = 2130968579;
+			
+			// aapt resource value: 0x7f040002
+			public const int Username = 2130968578;
 			
 			static String()
 			{

@@ -2,4 +2,6 @@
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">AppHotelera</string>
+  <string name="Username">Administrador@hotmail.com</string>
+  <string name="Password">pass</string>
 </resources>

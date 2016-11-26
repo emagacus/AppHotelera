@@ -28,9 +28,13 @@ namespace AppHotelera
 
             button.Click += delegate
             {
-               
-                StartActivity(typeof(ServicioActivity));
-              
+                EditText bu = FindViewById<EditText>(Resource.Id.editText1);
+                string pass = GetString(Resource.String.Password);
+
+                if (pass == bu.Text)
+                {
+                    StartActivity(typeof(ServicioActivity));
+                }
 
             };
         }
