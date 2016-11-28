@@ -63,6 +63,27 @@ namespace AppHotelera
 			// aapt resource value: 0x7f050005
 			public const int MyButton = 2131034117;
 			
+			// aapt resource value: 0x7f050017
+			public const int REgpassconfirm = 2131034135;
+			
+			// aapt resource value: 0x7f050010
+			public const int RegHab = 2131034128;
+			
+			// aapt resource value: 0x7f050015
+			public const int RegPass = 2131034133;
+			
+			// aapt resource value: 0x7f050012
+			public const int RegVehiculo = 2131034130;
+			
+			// aapt resource value: 0x7f050018
+			public const int RegbuttonOK = 2131034136;
+			
+			// aapt resource value: 0x7f05000e
+			public const int Regcorreo = 2131034126;
+			
+			// aapt resource value: 0x7f05000c
+			public const int Regnombre = 2131034124;
+			
 			// aapt resource value: 0x7f050009
 			public const int button1 = 2131034121;
 			
@@ -72,8 +93,8 @@ namespace AppHotelera
 			// aapt resource value: 0x7f050008
 			public const int button3 = 2131034120;
 			
-			// aapt resource value: 0x7f05000d
-			public const int buttonOKPV = 2131034125;
+			// aapt resource value: 0x7f05001c
+			public const int buttonOKPV = 2131034140;
 			
 			// aapt resource value: 0x7f050007
 			public const int buttonReg = 2131034119;
@@ -83,6 +104,27 @@ namespace AppHotelera
 			
 			// aapt resource value: 0x7f050002
 			public const int editText2 = 2131034114;
+			
+			// aapt resource value: 0x7f050013
+			public const int rgspace1 = 2131034131;
+			
+			// aapt resource value: 0x7f05000b
+			public const int rgtextView1 = 2131034123;
+			
+			// aapt resource value: 0x7f05000d
+			public const int rgtextView2 = 2131034125;
+			
+			// aapt resource value: 0x7f05000f
+			public const int rgtextView3 = 2131034127;
+			
+			// aapt resource value: 0x7f050011
+			public const int rgtextView4 = 2131034129;
+			
+			// aapt resource value: 0x7f050014
+			public const int rgtextView5 = 2131034132;
+			
+			// aapt resource value: 0x7f050016
+			public const int rgtextvieconfirm = 2131034134;
 			
 			// aapt resource value: 0x7f050004
 			public const int space1 = 2131034116;
@@ -96,11 +138,14 @@ namespace AppHotelera
 			// aapt resource value: 0x7f050006
 			public const int space4 = 2131034118;
 			
-			// aapt resource value: 0x7f05000b
-			public const int textView1 = 2131034123;
+			// aapt resource value: 0x7f050019
+			public const int textView1 = 2131034137;
 			
-			// aapt resource value: 0x7f05000c
-			public const int timePicker1 = 2131034124;
+			// aapt resource value: 0x7f05001a
+			public const int textView2 = 2131034138;
+			
+			// aapt resource value: 0x7f05001b
+			public const int timePicker1 = 2131034139;
 			
 			static Id()
 			{
@@ -122,10 +167,16 @@ namespace AppHotelera
 			public const int Menu = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Restaurant = 2130903042;
+			public const int Registro = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int ValetParking = 2130903043;
+			public const int Restaurant = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int Stats = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int ValetParking = 2130903045;
 			
 			static Layout()
 			{

@@ -10,17 +10,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace AppHotelera
+namespace AppHotelera.DB
 {
-    public class Servicio
+    class Valet:Servicio
     {
-       
-
-        void genMSG()
-        {
-            
-
-        }
-
+        public string vehiculo { get; set; }
     }
 }
