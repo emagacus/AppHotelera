@@ -38,6 +38,7 @@ namespace AppHotelera
                 {
                     Usuario user = new Usuario();
                     user.nombre = unom.Text;
+                    user.password = up.Text;
                     user.correo = ucorreo.Text;
                     user.habitacion = uhab.Text;
                     user.vehiculo = uauto.Text;

@@ -7,6 +7,7 @@ using Android.Widget;
 using Android.OS;
 using SQLite;
 using AppHotelera.DB;
+using System.IO;
 
 namespace AppHotelera
 {
@@ -34,18 +35,64 @@ namespace AppHotelera
             // and attach an event to it
             Button button = FindViewById<Button>(Resource.Id.MyButton);
             Button breg = FindViewById<Button>(Resource.Id.buttonReg);
+            EditText user = FindViewById<EditText>(Resource.Id.logeditTextMail);
+            EditText pass = FindViewById<EditText>(Resource.Id.logeditText1);
 
             breg.Click += delegate { StartActivity(typeof(RegActivity)); };
 
             button.Click += delegate
             {
-               
+                if (validCredentials(user.Text, pass.Text, pathToDatabase))
+                {
+                    SaveUser(user.Text);
                     StartActivity(typeof(ServicioActivity));
-               
+                }else
+                {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                    alert.SetTitle("ERROR");
+                    alert.SetMessage("USUARIO O CONTRASEÑA INCORRECTOS");
+                    alert.SetPositiveButton("ACEPTAR", (senderAlert, args) => {
+                        Toast.MakeText(this, "", ToastLength.Short).Show();
+                    });
+
+                    Dialog dialog = alert.Create();
+                    dialog.Show();
+                }
 
             };
         }
 
+
+        bool validCredentials(string user,string pas,string path)
+        {
+            SQLiteAsyncConnection con = new SQLiteAsyncConnection(path);
+            string command = "SELECT password FROM Usuario WHERE correo = '"+ user +"';";
+            var passdb  = con.ExecuteScalarAsync<string>(command);
+
+            var b = FindViewById<Button>(Resource.Id.buttonReg);
+            b.Text = passdb.Result;
+
+            if (pas == passdb.Result)
+            {
+                return true;
+            }
+            else { return false; }
+              
+            
+        }
+
+
+        void SaveUser(string data)
+        {
+            var path = global::Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
+            var filename = Path.Combine(path.ToString(), "myfile.txt");
+
+            using (var streamWriter = new StreamWriter(filename,false))
+            {
+                streamWriter.WriteLine(data);
+            }
+
+        }
 
 
 
