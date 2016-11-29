@@ -96,14 +96,11 @@ namespace AppHotelera
 			// aapt resource value: 0x7f050009
 			public const int button3 = 2131034121;
 			
-			// aapt resource value: 0x7f050023
-			public const int buttonOKPV = 2131034147;
+			// aapt resource value: 0x7f050029
+			public const int buttonOKPV = 2131034153;
 			
 			// aapt resource value: 0x7f050007
 			public const int buttonReg = 2131034119;
-			
-			// aapt resource value: 0x7f050021
-			public const int editText1 = 2131034145;
 			
 			// aapt resource value: 0x7f050003
 			public const int logeditText1 = 2131034115;
@@ -132,6 +129,12 @@ namespace AppHotelera
 			// aapt resource value: 0x7f050017
 			public const int rgtextvieconfirm = 2131034135;
 			
+			// aapt resource value: 0x7f05001f
+			public const int slbutton1 = 2131034143;
+			
+			// aapt resource value: 0x7f05001e
+			public const int sltextView1 = 2131034142;
+			
 			// aapt resource value: 0x7f050004
 			public const int space1 = 2131034116;
 			
@@ -144,29 +147,44 @@ namespace AppHotelera
 			// aapt resource value: 0x7f050006
 			public const int space4 = 2131034118;
 			
-			// aapt resource value: 0x7f05001a
-			public const int sttextView1id = 2131034138;
+			// aapt resource value: 0x7f05001d
+			public const int srbutton1 = 2131034141;
 			
 			// aapt resource value: 0x7f05001b
-			public const int sttextView2nom = 2131034139;
+			public const int sreditText1 = 2131034139;
+			
+			// aapt resource value: 0x7f05001a
+			public const int srtextView1 = 2131034138;
 			
 			// aapt resource value: 0x7f05001c
-			public const int sttextView3corre = 2131034140;
-			
-			// aapt resource value: 0x7f05001d
-			public const int sttextView4hab = 2131034141;
-			
-			// aapt resource value: 0x7f05001e
-			public const int sttextView5veh = 2131034142;
-			
-			// aapt resource value: 0x7f05001f
-			public const int sttextView6saldo = 2131034143;
+			public const int srtimePicker1 = 2131034140;
 			
 			// aapt resource value: 0x7f050020
-			public const int textView1 = 2131034144;
+			public const int sttextView1id = 2131034144;
+			
+			// aapt resource value: 0x7f050021
+			public const int sttextView2nom = 2131034145;
 			
 			// aapt resource value: 0x7f050022
-			public const int timePicker1 = 2131034146;
+			public const int sttextView3corre = 2131034146;
+			
+			// aapt resource value: 0x7f050023
+			public const int sttextView4hab = 2131034147;
+			
+			// aapt resource value: 0x7f050024
+			public const int sttextView5veh = 2131034148;
+			
+			// aapt resource value: 0x7f050025
+			public const int sttextView6saldo = 2131034149;
+			
+			// aapt resource value: 0x7f050027
+			public const int vpeditText1 = 2131034151;
+			
+			// aapt resource value: 0x7f050026
+			public const int vptextView1 = 2131034150;
+			
+			// aapt resource value: 0x7f050028
+			public const int vptimePicker1 = 2131034152;
 			
 			static Id()
 			{
@@ -194,10 +212,13 @@ namespace AppHotelera
 			public const int Restaurant = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int Stats = 2130903044;
+			public const int ServLimpieza = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int ValetParking = 2130903045;
+			public const int Stats = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int ValetParking = 2130903046;
 			
 			static Layout()
 			{

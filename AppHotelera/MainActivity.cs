@@ -69,8 +69,7 @@ namespace AppHotelera
             string command = "SELECT password FROM Usuario WHERE correo = '"+ user +"';";
             var passdb  = con.ExecuteScalarAsync<string>(command);
 
-            var b = FindViewById<Button>(Resource.Id.buttonReg);
-            b.Text = passdb.Result;
+           
 
             if (pas == passdb.Result)
             {

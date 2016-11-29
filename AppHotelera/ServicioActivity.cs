@@ -28,10 +28,14 @@ namespace AppHotelera
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Menu);
             Button b1 = FindViewById<Button>(Resource.Id.button2);
+            Button bmaid = FindViewById<Button>(Resource.Id.button3);
+            Button bres = FindViewById<Button>(Resource.Id.button1);
             Button bstats = FindViewById<Button>(Resource.Id.MenStatbutton4);
 
             b1.Click += delegate { StartActivity(typeof(ValetParking));};
             bstats.Click += delegate { StartActivity(typeof(StatsActivity)); };
+            bmaid.Click += delegate { StartActivity(typeof(MaidActivity)); };
+            bres.Click += delegate { StartActivity(typeof(ResActivity)); };
             // Create your application here
         }
 

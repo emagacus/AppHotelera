@@ -15,36 +15,20 @@ using AppHotelera.DB;
 
 namespace AppHotelera
 {
-    [Activity(Label = "ValetParking")]
-    public class ValetParking : ServicioActivity
+    [Activity(Label = "ResActivity")]
+    public class ResActivity : ServicioActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             var docsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
             var pathToDatabase = System.IO.Path.Combine(docsFolder, "apphoteleradb1.db");
-
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.ValetParking);
-            loadDataVehiculo(pathToDatabase);
-
-            Button b1 = FindViewById<Button>(Resource.Id.buttonOKPV);
-            b1.Click += delegate {
-                AddNewValet(pathToDatabase);
-                createDialog(); };
-
+            SetContentView(Resource.Layout.Restaurant);
+            loadHabitacion(pathToDatabase);
+            // Create your application here
+            Button b1 = FindViewById<Button>(Resource.Id.srbutton1);
+            b1.Click += delegate { AddNewAlimento(pathToDatabase); createDialog(); };
         }
-
-        void loadDataVehiculo(string path)
-        {
-            SQLiteAsyncConnection con = new SQLiteAsyncConnection(path);
-            string command;
-            var uveh = FindViewById<TextView>(Resource.Id.vpeditText1);
-            command = "SELECT vehiculo FROM Usuario WHERE correo = '" + loadData() + "';";
-             uveh.Text += con.ExecuteScalarAsync<string>(command).Result;
-
-        }
-
-
 
         string loadData()
         {
@@ -54,21 +38,31 @@ namespace AppHotelera
 
             using (var streamRdr = new StreamReader(filename))
             {
-             auto = streamRdr.ReadLine();
+                auto = streamRdr.ReadLine();
             }
 
             return auto;
         }
 
-        void AddNewValet(string path)
+        void loadHabitacion(string path)
         {
-            Valet val=new Valet();
-            var auto = FindViewById<EditText>(Resource.Id.vpeditText1);
-            var date = FindViewById<TimePicker>(Resource.Id.vptimePicker1);
-            val.costo = 45;
+            SQLiteAsyncConnection con = new SQLiteAsyncConnection(path);
+            string command;
+            var uveh = FindViewById<EditText>(Resource.Id.sreditText1);
+            command = "SELECT habitacion FROM Usuario WHERE correo = '" + loadData() + "';";
+            uveh.Text += con.ExecuteScalarAsync<string>(command).Result;
+        }
+
+
+        void AddNewAlimento(string path)
+        {
+            Alimentos val = new Alimentos();
+            var hab = FindViewById<EditText>(Resource.Id.sreditText1);
+            var date = FindViewById<TimePicker>(Resource.Id.srtimePicker1);
+            val.costo = 75;
             val.date = date.ToString();
-            val.vehiculo = auto.Text;
-            val.nombre = "Valet Parking";
+            val.habitacion = hab.Text;
+            val.nombre = "ALIMENTOS";
             val.idemp = 1;
 
 
@@ -80,13 +74,12 @@ namespace AppHotelera
 
             db.ExecuteAsync(comm);
 
-            if (db.InsertAsync(val).Result != 0) { db.UpdateAsync(val);}
-             
-               
+            if (db.InsertAsync(val).Result != 0) { db.UpdateAsync(val); }
+
+
 
 
         }
-
 
 
     }
